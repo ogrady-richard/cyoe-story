@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Accordion - Customize icons</title>
+  <link rel="stylesheet" href="resources/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+        $( "#accordion" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+<div id="story" style="border: 3px solid black; padding: 10px; background-color: #FFF0E0">
+    <center><h1>The Spoopy Forest</h1></center>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu malesuada nulla. Morbi id nisi pulvinar, consequat libero id, aliquam purus. Ut nec facilisis massa. Integer scelerisque luctus sollicitudin. Nunc ac elit odio. Aliquam et est eget neque egestas pulvinar a non enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eget dictum augue, non elementum justo.</p>
+    
+    <p style="text-align: center"><img src="https://doowansnewsandevents.files.wordpress.com/2013/10/snake-medicine.jpg" width="250" height="150"></p><p style="text-align: center; font-size: 10px;"><i>snake</i></p>
+
+    <p>In sit amet maximus orci. Vivamus vitae imperdiet lacus, eu efficitur lorem. Nam ullamcorper fringilla auctor. Pellentesque aliquet mollis luctus. Duis auctor mauris id efficitur sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio ex, feugiat id sollicitudin a, blandit at neque. Praesent sit amet faucibus dui. Ut tempor, sem sit amet aliquet euismod, felis ante faucibus lorem, eget placerat ipsum sapien id tortor. Quisque scelerisque purus consectetur orci pharetra, ac egestas velit venenatis. Sed quis dolor volutpat ex cursus faucibus tempus quis elit.</p>
+</div> 
+<div id="accordion">
+  <h3>Inventory</h3>
+  <div>
+    <p>Stuff</p>
+    <p>Things</p>
+  </div>
+  <h3>Party</h3>
+  <div>
+    <p>People</p>
+    <p>Other People</p>
+  </div>
+  <h3>Map</h3>
+  <div>
+    <p></p>
+  </div>
+  <h3>Status</h3>
+  <div>
+    <p></p>
+  </div>
+</div>
+ 
+</body>
+</html>
